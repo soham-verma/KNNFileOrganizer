@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knn-file-organiser"
+version = "0.1.0"
+description = "An offline, AI-powered file organiser using KNN on semantic embeddings."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "Soham V", email = "contact@sohamverma.com" },
+]
+keywords = ["file", "organiser", "knn", "sentence-transformers", "classifier"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+dependencies = [
+  "sentence-transformers>=2.2.0",
+  "scikit-learn>=1.1.0",
+  "PyMuPDF>=1.21.0",
+  "joblib>=1.2.0"
+]
+
+[project.urls]
+"Homepage"     = "https://github.com/your-username/knn-file-organiser"
+"Repository"   = "https://github.com/your-username/knn-file-organiser"
+"Documentation"= "https://github.com/your-username/knn-file-organiser#readme"
+
+[project.scripts]
+knn-file-organiser = "knn_file_organiser.cli:main"
+
+# Tell setuptools to look under src/ for your packages:
+[tool.setuptools.packages.find]
+where = ["src"]
